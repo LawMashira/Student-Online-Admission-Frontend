@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+![Screenshot (35)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/acbe6c78-c240-45a9-ab28-3707a5826e99)
+![Screenshot (34)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/9ce8fb81-d9a0-4dae-be62-aca7250fec39)
+![Screenshot (33)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/99f1fe20-1c24-479e-bb4a-99733c70301f)
+![Screenshot (32)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/422c2ee8-19f5-4b7a-b3a4-6f273c03b428)
+![Screenshot (31)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/c3d5c257-54e8-4eab-9718-96e76c34dd95)
+![Screenshot (30)](https://github.com/LawMashira/Student-Online-Admission-Frontend/assets/120568696/697a8112-5676-49a3-8deb-c8c823574919)
+
+
