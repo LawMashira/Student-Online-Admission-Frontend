@@ -33,12 +33,11 @@ import { Link } from "react-router-dom"
 {
                 
   NavItems.map((navlink)=>(
-<li  className=" text-xl font-normal text-white tracking-wide cursor-pointer
-hover:text-red-700 duration-300"  > 
+<li  className=" text-xl font-normal text-white tracking-wide  hover:text-red-700 duration-300 cursor-pointer"  > 
 
 
 
-<Link to={navlink.url}>
+<Link className="hover:text-red-500 duration-300 cursor-pointer" to={navlink.url}>
 {navlink.title}
 </Link>
 

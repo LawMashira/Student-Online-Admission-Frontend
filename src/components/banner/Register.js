@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import User from '../../models/user';
-import { useSelector } from 'react-redux';
+import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import userService from '../../services/userService';
-import { getResponseError } from './errorUtils';
+
+
 //import AuthenticationService from '../../services/authentication.service';
 const Register = () => {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
+
 
 const [user,setUser]=useState({
 id:"",
@@ -15,8 +20,8 @@ password:""
 
 
 })
-// Error handling from springboot endpoints
-const [error ,setError] = useState(null);
+
+
 
 
 //******************************************** */
@@ -24,22 +29,43 @@ const navigate = useNavigate();
 const handleChange=(e)=>{
   const value= e.target.value;
   setUser({...user,[ e.target.name]: value});
+
+
+  
 }
 const saveUser=(e)=>{
   e.preventDefault();
-  setError(null);
 
-  const formData = new FormData(e.target)
-  const payload =Object.fromEntries(formData);
+  setSubmitted(true);
 
-console.log('payload:',payload)
-  //************************************************* */
+      if (!user.username || !user.password || !user.name) {
+          return;
+      }
+
+      setLoading(true);
+ 
   userService.saveUser(user).then((response)=>{
-  console.log('data:',data);
-  navigate('/sign_up/maghandi/college');
+  
+
+console.log(response)
+
+if (response?.status === 200) {
+  setSuccessMessage('Registration successful');
+}
+
+navigate('/sign_up/maghandi/college');
+
    } ).catch((error)=>{
-    console.log('error.response',error.response);
-     setError(getResponseError(error))
+   // console.log(error);
+
+    if (error?.response?.status === 409) {
+      setErrorMessage("Email already exists in someone's name ");
+  } else {
+      setErrorMessage('Unexpected error occurred.');
+  }
+  setLoading(false);
+
+     
    })
 }
 
@@ -49,17 +75,37 @@ console.log('payload:',payload)
     <div  className="w-full mt-20 bg-slate-950 px-10  h-auto py-20 pb-20 rounded-e-3xl flex items-center 
      border-b-[1px] border-b-black flex-col ">
 <h className="text-5xl font-semibold">Sign Up</h>
-<p className="font-medium text-lg text-gray-500 mt-5">Please enter your credentinos to sign up</p>
+
 <div className="mt-8">
 
+{errorMessage &&
+          
+         <div className="alert alert-danger">
+                    {errorMessage}
+                </div>
+                }
 
-<div className="text-lg font-medium text-center ">
+                
+{successMessage&&
+          
+          <div className="alert alert-secondary">
+                     {successMessage}
+                 </div>
+                 }
 
+<form
+                    onSubmit={(e) => saveUser(e)}
+                    noValidate
+                    className={submitted ? 'was-validated' : ''}
+                >
+
+<div className="text-lg font-medium text-left mt-10">
+
+ 
+
+   
   
-  
-  
-  
-                           <label> FullName </label>
+                           <label>Name </label>
                                 <input 
                                 name="name" 
                                 value={user.name}
@@ -68,9 +114,11 @@ console.log('payload:',payload)
                                 onChange={(e) => handleChange(e)}
                                 required
                                 />
-                        <FormFieldError message={error?.name}    />   
+                                <div className="invalid-feedback">
+                            Fullname is required.
+                        </div>
                 </div>
-                <div className="text-lg font-medium text-center ">
+                <div className="text-lg font-medium text-left mt-10 ">
                                 <label>Email</label>
                                 <input
                                 name="username" 
@@ -80,10 +128,13 @@ console.log('payload:',payload)
                                 onChange={(e) => handleChange(e)}
                                 required
                                 />
+                                <div className="invalid-feedback">
+                         Email is required.
+                        </div>
                                  
                 </div>
 
-                <div className="text-lg font-medium text-center">
+                <div className="text-lg font-medium text-left mt-10">
                                 <label>Password</label>
                                 <input  
                                 name="password"
@@ -94,10 +145,13 @@ console.log('payload:',payload)
                                 onChange={(e) => handleChange(e)}
                                 required
                                 />
+                                <div className="invalid-feedback">
+                            Password is required.
+                        </div>
                                
                 </div>
 
-
+               
 
 
 {/*
@@ -125,12 +179,13 @@ console.log('payload:',payload)
   </div>*/}
 
                 <div className="mt-8 flex flex-col">
-                              <button onClick={saveUser}   className="active:scale-[.98] active:duration-75 hover:scale-[1.01] 
+                              <button onClick={saveUser}   className="active:scale-[.98] active:duration-75 
+                              hover:scale-[1.01] 
                               ease-in-out transition-all py-3 rounded-xl bg-violet-500 text-white font-bold 
-                              text-lg "  > Sign Up</button>  
+                              text-lg " disabled={loading} > Sign Up</button>  
                 </div>
-
-              
+                
+       </form>       
                 
 
 </div>
