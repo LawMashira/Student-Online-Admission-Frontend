@@ -3,51 +3,76 @@ import User from '../../models/user';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import userService from '../../services/userService';
-import { getResponseError } from './errorUtils';
-import swal from 'sweetalert';
-import axios from 'axios';
-import { render } from '@testing-library/react';
+import AuthenticationService from '../../services/authentication.service';
+
+
+
 //import AuthenticationService from '../../services/authentication.service';
- class Register2 extends Component{
+ const Register2 =()=>{
 
-state ={
-id:"",
-username:"",
-fullname:"",
-password:""
+  const [user, setUser] = useState(new User('', '', ''));
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const currentUser = useSelector(state => state.user);
+
+  const navigate = useNavigate();
+
+  //mounted
+  useEffect(() => {
+      if (currentUser?.id) {
+          //navigate
+          navigate('/profile');
+      }
+  }, []);
+
+  //<input name="x" value="y" onChange=(event) => handleChange(event)>
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+
+    setUser((prevState => {
+        //e.g: prevState ({user: x, pass: x}) + newKeyValue ({user: xy}) => ({user: xy, pass: x})
+        return {
+            ...prevState,
+            [name]: value
+        };
+    }));
+  };
+
+  const handleRegister = (e) => {
+
+      e.preventDefault();
+
+    setSubmitted(true);
+
+    if (!user.username || !user.password || !user.name) {
+        return;
+    }
+
+    setLoading(true);
+
+    AuthenticationService.register(user).then(_ => {
+        navigate('/sign_up/maghandi/college');
+    }).catch(error => {
+       console.log(error);
+       if (error?.response?.status === 409) {
+           setErrorMessage('username or password is not valid.');
+       } else {
+           setErrorMessage('Unexpected error occurred.');
+       }
+       setLoading(false);
+    });
+  };
 
 
-}
 
 
 
-//  navigate('/sign_up/maghandi/college');
-//const navigate = useNavigate();
-handleChange=(e)=>{
-  
-this.setState({
-     [e.target.name]: e.target.value    
-});
-  
-}
- saveUser= async(e)=>{
-  e.preventDefault();
- 
-  const res =await axios.post('http://localhost:8080/api/authentication/sign-up',this.state)
 
 
-if(res.data.status === 200)
-(
-this.setState({
-                id:"",
-                username:"",
-                fullname:"",
-                password:""           
-})
-)
- }
- 
-render() {
+
+
   return (
     <div  className="w-full mt-20 bg-slate-950 px-10  h-auto py-20 pb-20 rounded-e-3xl flex items-center 
      border-b-[1px] border-b-black flex-col ">
@@ -55,6 +80,19 @@ render() {
 <p className="font-medium text-lg text-gray-500 mt-5">Please enter your credentinos to sign up</p>
 <div className="mt-8">
 
+{errorMessage &&
+                <div className="alert alert-danger">
+                    {errorMessage}
+                </div>
+                }
+<form
+
+onSubmit={(e) => handleRegister(e)}
+noValidate
+className={submitted ? 'was-validated' : ''}
+
+
+>
 
 <div className="text-lg font-medium text-center ">
 
@@ -68,7 +106,8 @@ render() {
                                 
                                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                                 placeholder="Enter your fullname"
-                                name="fullname"   onChange={this.handleChange} value={this.fullname}
+                                name="fullname"   
+                                onChange={(e) => handleChange(e)}
                                 required
                                 />
                               
@@ -79,7 +118,8 @@ render() {
                               
                                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                                 placeholder="Enter your email"
-                                name="username"   onChange={this.handleChange} value={this.usename}
+                                name="username"   
+                                onChange={(e) => handleChange(e)}
                                 required
                                 />
                                  
@@ -92,7 +132,8 @@ render() {
                                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                                 placeholder="Enter your password"
                                 type="password"
-                                name="password"   onChange={this.handleChange} value={this.password}
+                                name="password"   
+                                onChange={(e) => handleChange(e)}
                                 required
                                 />
                                
@@ -126,12 +167,12 @@ render() {
   </div>*/}
 
                 <div className="mt-8 flex flex-col">
-                              <button onClick={this.saveUser}   className="active:scale-[.98] active:duration-75 hover:scale-[1.01] 
+                              <button    className="active:scale-[.98] active:duration-75 hover:scale-[1.01] 
                               ease-in-out transition-all py-3 rounded-xl bg-violet-500 text-white font-bold 
-                              text-lg "  > Sign Up</button>  
+                              text-lg "  disabled={loading}> Sign Up</button>  
                 </div>
 
-              
+                </form> 
                 
 
 </div>
@@ -140,6 +181,6 @@ render() {
     </div>
   );
 }
-}
+
 
 export default  Register2;

@@ -8,6 +8,7 @@ import Faculty from './Faculty';
 
 //import Footer from './Footer';
 import { useTypewriter } from 'react-simple-typewriter';
+import BannerSocialMedia from './BannerSocialMedia';
 //import FacultyCard from './FacultyCard';
 //import MissionCard from './MissionCard';
 
@@ -47,13 +48,16 @@ const Banner=()=> {
 <Main/> 
 
 
+<div className="absolute bottom-0 left-96 right-96 flex justify-center items-center  ">
+
+</div>
 
 <div className="absolute bottom-0 left-96 right-96 flex justify-center items-center   flex-col gap-5">
-                <h1 className="text-3xl text-red-700">
+                <h1 className="text-3xl text-red-700 ">
                 ENROLLMENT IN PROGRESS APPLY TODAY
                 </h1>
                 <h2 className="text-3xl font-bold text-white">
-     <span className="text-yellow-500"> {text} </span> </h2>
+     <span className="text-yellow-500 text"> {text} </span> </h2>
                 
                
 
@@ -66,17 +70,13 @@ const Banner=()=> {
  
 
 
-
-
-
-
       </div>
      
       
-      <div className="  w-full py-20 h-96 border-b-[1px] border-b-black mt-96 grid grid-cols-3 gap-8"> 
+      <div className="  w-full py-20 border-b-[1px] border-b-black mt-96 grid grid-cols-3 gap-8"> 
       
       <div className="w-full h-full text-xl">
-        <ul> 
+        <ul className=" "> 
         <li>
         *   Accelerating our progress as an international leader in sciences, engineering, social sciences, health
 science, business, and music.

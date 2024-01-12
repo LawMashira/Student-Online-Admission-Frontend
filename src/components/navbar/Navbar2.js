@@ -18,7 +18,7 @@ import { Link } from "react-router-dom"
                 </div>
                 
                 <div class="flex flex-auto">
-          <h1 className="text-3xl font-signature ml-2">Maghandi Institute of Technology</h1>      
+          <h1 className="text-3xl font-signature ml-2">Maghandi College</h1>      
        </div>   
           
 

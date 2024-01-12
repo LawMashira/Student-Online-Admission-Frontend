@@ -1,5 +1,6 @@
 import React from 'react'
 import { schoolLog } from './Images'
+import{FaFacebook,FaGithub,FaLinkedinIn,FaInstagram,FaTwitter}from "react-icons/fa"
 
 export const Footer = () => {
   return (
@@ -16,7 +17,7 @@ export const Footer = () => {
 
          <p className="font-medium">
 
-         Maghandi Institute of Technology
+         Maghandi College
 Cnr 12th Ave/Park Rd
 P.O BOX 1392
 Bulawayo, Zw
@@ -26,6 +27,46 @@ Fax:+263 (292) 251165
          </p>
             
           </div>
+
+         <h1 className='mt-10 text-center text-blue-500 text-xl'>FOLLOW US ON</h1>
+          <div className='flex gap-4 bg-gradient-to-r from-[#1e2024] to-[#23272b] mt-10'>
+        <a href='https://www.facebook.com/law.mashira'>
+<span className="icon">
+<FaFacebook/>
+  </span>
+  </a>
+  <a href='https://www.linkedin.com/in/lawson-matutu-520a07216/'>
+  <span className="icon">
+<FaLinkedinIn/>
+  </span>
+  </a>
+  
+  
+
+  <a href='http://www.github.com/LawMashira'>
+  <span className="icon">
+<FaInstagram/>
+  </span>
+  </a>
+
+
+  
+
+  <a href='http://www.github.com/LawMashira'>
+  <span className="icon">
+<FaTwitter/>
+  </span>
+  </a>
+
+</div>
+                                  
+               
+
+
+        
+      
+
+
 
 
 
