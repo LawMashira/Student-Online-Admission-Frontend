@@ -4,7 +4,7 @@ import{FaFacebook,FaGithub,FaLinkedinIn,FaInstagram,FaTwitter}from "react-icons/
 
 export const Footer = () => {
   return (
-    <div className="w-full h-96 py-20 items-center  border-b-[1px] border-b-black  grid grid-cols-4 gap-8" >
+    <div className="w-full h-auto py-20   border-b-[1px] border-black  grid grid-cols-1  mdl:grid-cols-4 gap-8" >
 
 < div className="w-full  h-full flex flex-col">  
 <div  className="  border-yellow-500 rounded-lg overflow-hidden" >           
@@ -29,7 +29,7 @@ Fax:+263 (292) 251165
           </div>
 
          <h1 className='mt-10 text-center text-blue-500 text-xl'>FOLLOW US ON</h1>
-          <div className='flex gap-4 bg-gradient-to-r from-[#1e2024] to-[#23272b] mt-10'>
+          <div className='flex gap-2  bg-gradient-to-r from-[#1e2024] to-[#23272b] mt-10'>
         <a href='https://www.facebook.com/law.mashira'>
 <span className="icon">
 <FaFacebook/>

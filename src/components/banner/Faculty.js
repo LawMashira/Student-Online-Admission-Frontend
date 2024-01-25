@@ -16,7 +16,7 @@ const Faculty = () => {
 
               </div>
 
-              <div  className="grid grid-cols-3 gap-14">
+              <div  className="grid grid-cols-1 mdl:grid-cols-3 gap-14">
                 <FacultyCard
                 title="Faculty Of Construction and Civil Enginnering"
                 desc="riotriotrorgpogpogpotgopo"
@@ -40,8 +40,11 @@ const Faculty = () => {
                 />
                 <FacultyCard
                 title="Faculty Of Teacher Education"
-                desc="iorgiogjiogjihjihpiohhho6795y80ti9[-]o=\p
-iootyiouoyujp-yujp][-o=klj0oyupyotyty9klthiotykltypotypotyytoph;lpoy
+                desc="iorgiogjiogjihjihpiohhho6795y80ti9
+                [-]o=\p
+iootyiouoyujp-yujp][-o=klj0oyupyotyty9klthiotykltypotypo
+  tyyto
+  ph;lpoy
 ylyoyypoyypoylypoyupyu;yu'[yuyu
 uyupyupopry0-lyuplylyu[yu[;
 j;j;l;lj;lj;'j;lj'
