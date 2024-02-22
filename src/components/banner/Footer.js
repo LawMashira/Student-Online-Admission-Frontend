@@ -1,6 +1,6 @@
 import React from 'react'
 import { schoolLog } from './Images'
-import{FaFacebook,FaGithub,FaLinkedinIn,FaInstagram,FaTwitter}from "react-icons/fa"
+import{FaFacebook,FaLinkedinIn,FaInstagram,FaTwitter}from "react-icons/fa"
 
 export const Footer = () => {
   return (

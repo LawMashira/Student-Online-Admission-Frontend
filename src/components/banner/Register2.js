@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react'
+/*import React, { Component, useEffect, useState } from 'react'
 import User from '../../models/user';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -164,7 +164,7 @@ className={submitted ? 'was-validated' : ''}
                       <a href='###'><button className="font-medium text-base text-violet-500"> Forgot Password</button>  </a>        
                 </div>
 
-  </div>*/}
+  </div>*
 
                 <div className="mt-8 flex flex-col">
                               <button    className="active:scale-[.98] active:duration-75 hover:scale-[1.01] 
@@ -183,4 +183,4 @@ className={submitted ? 'was-validated' : ''}
 }
 
 
-export default  Register2;
+export default  Register2;*/

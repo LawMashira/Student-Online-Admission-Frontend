@@ -12,7 +12,7 @@ import Footer from './components/banner/Footer';
 //import Faculty from './components/banner/Faculty';
 import FooterBottom from './components/banner/FooterBottom';
 import Login from './components/banner/Login';
-import Register2 from './components/banner/Register2';
+//import Register2 from './components/banner/Register2';
 import ApplicationPage from './components/banner/ApplicationPage';
 
 
@@ -40,8 +40,9 @@ import ApplicationPage from './components/banner/ApplicationPage';
 <Route path='/contact/maghandi/college' element={< Contact />}/>
 <Route path='/sign_up/maghandi/college' element={<  Login/>}/>
 <Route path='/admin/maghandi/college' element={< Admin/>}/>
-<Route path='/register/maghandi/college' element={< Register2/>}/>
+<Route path='/register/maghandi/college' element={< Register/>}/>
 <Route path='/application/maghandi/college' element={< ApplicationPage/>}/>
+ 
 
 
 </Routes>
@@ -49,8 +50,7 @@ import ApplicationPage from './components/banner/ApplicationPage';
     
 </BrowserRouter>
 
-
-
+ 
 
 
 <Footer/>

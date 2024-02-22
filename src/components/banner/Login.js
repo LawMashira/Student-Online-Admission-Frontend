@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import userService from '../../services/userService';
 
@@ -26,14 +26,14 @@ password:""
 const navigate = useNavigate();
 
 
- //mounted
+ /*/mounted
  useEffect(() => {
   if (user?.id) {
       //navigate
      // navigate('/profile');
      navigate('/application/maghandi/college');
   }
-}, []);
+}, []);*/
 
 const handleChange=(e)=>{
   const value= e.target.value;
