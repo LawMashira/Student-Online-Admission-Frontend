@@ -35,6 +35,7 @@ Fax:+263 (292) 251165
 <FaFacebook/>
   </span>
   </a>
+  
   <a href='https://www.linkedin.com/in/lawson-matutu-520a07216/'>
   <span className="icon">
 <FaLinkedinIn/>
