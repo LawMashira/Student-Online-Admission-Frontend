@@ -97,6 +97,8 @@ const handleSend = (e)=>{
                     }  contactInput  `}
                     type="text"
                     name="NAME"
+                    required
+                    //placeholder="Enter your name"
                   />
                 </div>
 
@@ -112,8 +114,12 @@ const handleSend = (e)=>{
                         /* errMessage ==="Phone is required"&&  "outline-designColor"*/
                       }
                     } contactInput  `}
-                    type="text"
+                    type="number"
                     name="Phone Number "
+                    min="10"
+                    max="10"
+                    required
+                    //placeholder="Enter phone number"
                   />
                 </div>
               </div>
@@ -130,7 +136,9 @@ const handleSend = (e)=>{
                     }
                   } contactInput   `}
                   type="email"
-                  name="Email"
+                  name="email"
+                  required
+                 // placeholder="Enter email number"
                 />
               </div>
               <div className="flex flex-col gap-4">
@@ -145,6 +153,8 @@ const handleSend = (e)=>{
                   } contactInput`}
                   type="text"
                   name="Subject"
+                  required
+                 // placeholder="Enter the subject matter"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
                 />
@@ -155,6 +165,8 @@ const handleSend = (e)=>{
                 </p>
                 <textarea
                   name="Message"
+                  required
+                  //placeholder="Enter your enquiry"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                   className={`${
@@ -178,7 +190,7 @@ const handleSend = (e)=>{
     tracking-wider uppercase hover:text-white duration-300
     hover:border-[1px] hover:border-designColor border-transparent text-yellow-100"
                 >
-                  Send Message
+                  Send An Enquiry
                 </button>
               </div>
               {/*

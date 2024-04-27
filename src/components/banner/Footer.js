@@ -31,7 +31,7 @@ export const Footer = () => {
         <h1 className="mt-10 text-center text-blue-500 text-xl">
           FOLLOW US ON
         </h1>
-        <div className="flex gap-2  bg-gradient-to-r from-[#1e2024] to-[#23272b] mt-10">
+        <div className="flex gap-1  bg-gradient-to-r from-[#1e2024 to-[#23272b mt-10 ">
           <a href="https://www.facebook.com/law.mashira">
             <span className="icon">
               <FaFacebook />

@@ -38,7 +38,7 @@ const Banner = () => {
       <Main />
 
       <div className="absolute bottom-0 left-52 mdl:left-96  right-96 flex justify-center items-center   flex-col gap-5">
-        <h1 className="text-base font-medium mdl:text-2xl text-red-700 mb-96">
+        <h1 className="  text-base font-medium mdl:text-2xl text-red-700 mb-96">
           ENROLLMENT IN PROGRESS APPLY TODAY
         </h1>
         <h2 className="mdl:text-3xl font-bold ">
