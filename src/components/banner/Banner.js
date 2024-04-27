@@ -42,7 +42,7 @@ const Banner = () => {
           ENROLLMENT IN PROGRESS APPLY TODAY
         </h1>
         <h2 className="mdl:text-3xl font-bold ">
-          <span className="text-yellow-500"> {text} </span>{" "}
+          <span className="text-violet-500"> {text} </span>{" "}
         </h2>
       </div>
 
