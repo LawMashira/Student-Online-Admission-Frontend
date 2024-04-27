@@ -58,9 +58,10 @@ const login= async(e)=>{
 
 
   return (
-    <div  className="w-full mt-20 bg-slate-950 px-10  h-auto py-20 pb-20 rounded-e-3xl flex items-center 
-     border-b-[1px] border-b-black flex-col ">
-<h className="text-5xl font-semibold">Welcome back</h>
+    <div  className='w-full mt-20 bg-[url("https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] 
+    px-10  h-auto py-20 pb-20 rounded-e-3xl flex items-center 
+     border-b-[1px] border-b-black flex-col    '>
+<h className="text-5xl font-semibold text-black">Welcome back</h>
 
 <div className="mt-8">
 
@@ -79,7 +80,7 @@ const login= async(e)=>{
                 >
  
 
-                <div className="text-lg font-medium text-left mt-10">
+                <div className="text-lg font-medium text-left mt-10 text-black">
                                 <label>Email</label>
                                 <input  
                                   name="username" 
@@ -96,7 +97,7 @@ const login= async(e)=>{
                         </div>
                 </div>
 
-                <div className="text-lg font-medium text-left mt-10">
+                <div className="text-lg font-medium text-left mt-10 text-black">
                                 <label >Password</label>
                                 <input  
                                   name="password"
@@ -117,7 +118,7 @@ const login= async(e)=>{
 
 
 
-                <div className="mt-8 flex  justify-between items-center" >
+                <div className="mt-8 flex  justify-between items-center text-black" >
                                 <div>
                                                 <input
                                                 
@@ -128,14 +129,14 @@ const login= async(e)=>{
 
 
                                 <label for="remember"
-                                  className="ml-2 font-medium text-base "              
+                                  className="ml-2 font-medium text-base text-black "              
                                 >Remember me </label>
 
                                 </div>
                
 
                 <div >
-                      <a href='###'><button className="font-medium text-base text-violet-500"> Forgot Password</button>  </a>        
+                      <a href='###'><button className="font-medium text-base t text-black"> Forgot Password</button>  </a>        
                 </div>
 
                 </div>

@@ -58,10 +58,11 @@ const Register = () => {
 
   return (
     <div
-      className="w-full mt-20 bg-slate-950 px-10  h-auto py-20 pb-20 rounded-e-3xl flex items-center 
-     border-b-[1px] border-b-black flex-col "
+      className='w-full mt-20 bg-[url("https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]  
+      h-auto py-20 pb-20 rounded-e-3xl flex items-center 
+     border-b-[1px] border-b-black flex-col '
     >
-      <h className="text-5xl font-semibold">Sign Up</h>
+      <h className="text-5xl font-semibold text-black">Sign Up</h>
 
       <div className="mt-8">
         {errorMessage && (
@@ -77,7 +78,7 @@ const Register = () => {
           noValidate
           className={submitted ? "was-validated" : ""}
         >
-          <div className="text-lg font-medium text-left mt-10">
+          <div className="text-lg font-medium text-left mt-10 text-black">
             <label>Name </label>
             <input
               name="name"
@@ -89,7 +90,7 @@ const Register = () => {
             />
             <div className="invalid-feedback">Fullname is required.</div>
           </div>
-          <div className="text-lg font-medium text-left mt-10 ">
+          <div className="text-lg font-medium text-left mt-10 text-black ">
             <label>Email</label>
             <input
               name="username"
@@ -102,7 +103,7 @@ const Register = () => {
             <div className="invalid-feedback">Email is required.</div>
           </div>
 
-          <div className="text-lg font-medium text-left mt-10">
+          <div className="text-lg font-medium text-left mt-10 text-black">
             <label>Password</label>
             <input
               name="password"
