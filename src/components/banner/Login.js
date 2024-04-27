@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import userService from '../../services/userService';
-
+import axios from 'axios';
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   //const [successMessage, setSuccessMessage] = useState('');
 
-
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
 const [user,setUser]=useState({
 id:"",
@@ -42,35 +43,14 @@ setUser({...user,[ e.target.name]: value});
 
   
 }
-const login=(e)=>{
+const login= async(e)=>{
   e.preventDefault();
-
-  setSubmitted(true);
-
-      if (!user.username || !user.password) {
-          return;
-      }
-
-      setLoading(true);
- 
-  userService.login(user).then((response)=>{
-  
-
-console.log(response)
-
-navigate('/application/maghandi/college');
-
-
-   } ).catch((error)=>{
-   //console.log(error);
-
-   console.log(error);
-      setErrorMessage(" Wrong username or password ");
-  
-  setLoading(false);
-
-     
-   })
+        try {
+            await axios.post('/api/users/signin', { username, password });
+            alert('Login successful');
+        } catch (error) {
+            alert('Invalid credentials');
+        }
 }
 
 
