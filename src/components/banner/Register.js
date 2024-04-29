@@ -62,7 +62,7 @@ const Register = () => {
       h-auto py-20 pb-20 rounded-e-3xl flex items-center 
      border-b-[1px] border-b-black flex-col '
     >
-      <h className="text-5xl font-semibold text-black">Sign Up</h>
+      <h className="text-5xl font-semibold text-black">Register</h>
 
       <div className="mt-8">
         {errorMessage && (
@@ -151,7 +151,7 @@ const Register = () => {
               disabled={loading}
             >
               {" "}
-              Sign Up
+              Register
             </button>
           </div>
         </form>

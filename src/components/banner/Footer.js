@@ -104,7 +104,7 @@ export const Footer = () => {
           faculties{" "}
         </h3>
         <ul className="flex flex-col gap-4 font-medium   py-6">
-          <li> Faculty Of Construction and Civli Enginnering </li>
+          <li> Faculty Of Construction and Civil Enginnering </li>
           <li> Faculty Of Commerce </li>
           <li> Faculty Of Teacher Education </li>
           <li> Faculty Of Hotel And Catering </li>

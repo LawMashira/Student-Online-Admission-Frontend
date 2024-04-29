@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="w-full h-auto bg-black text-white ">
       <div className="max-w-screen-2xl mx-auto px-16">
+        
         <BrowserRouter>
           <Navbar2 />
           <Routes>
@@ -35,7 +36,8 @@ function App() {
         </BrowserRouter>
 
         <Footer />
-        <FooterBottom />
+  <FooterBottom />
+  
       </div>
     </div>
   );

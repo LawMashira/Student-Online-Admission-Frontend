@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Title from "./Title";
 import ContactLeft from "./ContactLeft";
+import GoogleMap from "./GoogleMap";
 
 export default function Contact() {
   const [username, setUsername] = useState("");
@@ -116,8 +117,6 @@ const handleSend = (e)=>{
                     } contactInput  `}
                     type="number"
                     name="Phone Number "
-                    min="10"
-                    max="10"
                     required
                     //placeholder="Enter phone number"
                   />
@@ -207,9 +206,18 @@ const handleSend = (e)=>{
   }
 */}
             </form>
+  
           </div>
+
+          
+
         </div>
+       
+      
       </div>
+      <div className="justify-center">
+          <GoogleMap/> 
+          </div>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import humanities from "./humanities.jpg"
 import hotel from "./hotel.jpeg"
 import teacher from "./teacher.jpg"
 import computer from "./computer.jpeg"
-
+import principal from "./principal.jpg"
 
 export {
 
@@ -15,5 +15,6 @@ export {
                 teacher,
                 hotel,
                 bank,
-                humanities
+                humanities,
+                principal
 }
