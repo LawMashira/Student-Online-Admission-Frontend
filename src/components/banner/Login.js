@@ -45,9 +45,12 @@ setUser({...user,[ e.target.name]: value});
 }
 const login= async(e)=>{
   e.preventDefault();
+  //http://localhost:8080/api/authentication/sign-in
+  ///api/users/signin
         try {
-            await axios.post('/api/users/signin', { username, password });
+            await axios.post('http://localhost:8080/api/authentication/sign-in', { username, password });
             alert('Login successful');
+            navigate('/application/maghandi/college')
         } catch (error) {
             alert('Invalid credentials');
         }
@@ -136,7 +139,7 @@ const login= async(e)=>{
                
 
                 <div >
-                      <a href='###'><button className="font-medium text-base t text-black"> Forgot Password</button>  </a>        
+                      <a href='###'><button className="font-medium text-base  text-black"> Forgot Password</button>  </a>        
                 </div>
 
                 </div>
@@ -144,7 +147,8 @@ const login= async(e)=>{
                 <div className="mt-8 flex flex-col">
                               <button  onClick={login}  className="active:scale-[.98] 
                               active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 
-                               rounded-xl bg-violet-500 text-white font-bold text-lg " disabled={loading} > Sign In</button>  
+                               rounded-xl bg-violet-500 text-white font-bold text-lg " disabled={loading} > 
+                               Sign In</button>  
                 </div>
                                    <div className="mt-8 flex flex-col"> <h1 className='text-center'> OR</h1></div>
 
