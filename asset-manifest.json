@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Student-Online-Admission-Frontend/static/css/main.803f428e.css",
+    "main.js": "/Student-Online-Admission-Frontend/static/js/main.10b868ce.js",
+    "static/media/teacher.jpg": "/Student-Online-Admission-Frontend/static/media/teacher.df5c365ebdec0b751ba8.jpg",
+    "static/media/bank.jpg": "/Student-Online-Admission-Frontend/static/media/bank.68e64e53d9c6cafdfd83.jpg",
+    "static/media/principal.jpg": "/Student-Online-Admission-Frontend/static/media/principal.dfa5d75385320bd5f42c.jpg",
+    "static/media/humanities.jpg": "/Student-Online-Admission-Frontend/static/media/humanities.9fc3fdae557f27879db5.jpg",
+    "static/media/civil.jpg": "/Student-Online-Admission-Frontend/static/media/civil.f3bc50eea03ddd28c696.jpg",
+    "index.html": "/Student-Online-Admission-Frontend/index.html",
+    "main.803f428e.css.map": "/Student-Online-Admission-Frontend/static/css/main.803f428e.css.map",
+    "main.10b868ce.js.map": "/Student-Online-Admission-Frontend/static/js/main.10b868ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.803f428e.css",
+    "static/js/main.10b868ce.js"
+  ]
+}
