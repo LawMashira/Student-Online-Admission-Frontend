@@ -33,10 +33,11 @@ function App() {
               element={<ApplicationPage />}
             />
           </Routes>
-        </BrowserRouter>
-
+          
         <Footer />
   <FooterBottom />
+        </BrowserRouter>
+
   
       </div>
     </div>

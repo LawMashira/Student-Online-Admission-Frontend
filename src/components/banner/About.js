@@ -1,5 +1,5 @@
 import React from 'react'
-import { principal} from './Images'
+//import { principal} from './Images'
 export const About = () => {
   return (
     <div className='w-full h-[800px] pb-20  items-center  border-b-[1px] border-b-black
@@ -15,7 +15,7 @@ export const About = () => {
           
           </p>
           </div>
-          <div className='mt-20 text-black px-10'>
+          <div className='mt-20 text-white px-10'>
             <p>Driven by values of Ubuntu/Unhu and Excellence, the Polytechnic prides 
               itself in being the provider of highly empowered human capital through excellent Scientific, Technical and Vocational Education Training for sustainable socio-economic development. The institution’s hostel accommodation can house five hundred (500) students. Teaching and learning activities take place in well-equipped lecture rooms, workshops and laboratories. In line with the Ministry’s’ industrialisation thrust the institution is working on establishing a pharmaceutical factory in Bulawayo and a carpentry factory in Lupane.
 The institution falls under the Ministry of Higher and Tertiary Education, Science and Technical Development. Bulawayo Polytechnic offers a wide range of HEXCO, Short Courses and City & Guilds Courses
@@ -24,19 +24,27 @@ The institution falls under the Ministry of Higher and Tertiary Education, Scien
           </div>
           <h1 className="text-center text-3xl  text-violet-900"> Core Values</h1>
           <ol className="text-center text-xl text-yellow-500 text-bold">
-            <li> • Integrity • Professionalism • Innovation • Productivity
-• Excellency • Entrepreneurship</li>
+            <li> • Integrity  
+
+</li>
+<li>• Professionalism </li>
+<li>• Innovation</li>
+<li>• Productivity</li>
+<li>
+• Entrepreneurship
+</li>
+<li>• Excellency</li>
             
           </ol>
      
      
-     <div className="grid grid-cols-2  ">
+    {/* <div className="grid grid-cols-2  ">
       <div  className="">
         <img
         className="w-ful h-56 p-3 bg-slate-800 absolute  bottom-0 left-80 mt-7 "
         src={principal} alt=''
         />
-      </div>
+  </div>
       <div>
       <h1 className="text-left text-5xl text-black ">The Principal's Note</h1>
       <p className="text-center text-yellow-500 text-xl mb-36 "> "
@@ -46,7 +54,7 @@ future human needs of the formal and informal sector in Zimbabwe and the region.
 Bulawayo Polytechnic strives to reach out to commerce and industry through its Science, Technology, Engineering and Mathematics (STEM) thrust in order to tackle major national challenges and use TVET as a vehicle for modifying current 
 technological trends and inventing the future through research and innovation."</p>
      </div>
-    </div>
+    </div>*/}
     </div>
   )
 }
