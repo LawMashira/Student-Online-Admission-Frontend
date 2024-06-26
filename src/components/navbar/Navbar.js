@@ -1,11 +1,16 @@
 import React from "react"
 import { schoolLog } from "../banner/Images"
 import { NavItems } from "../NavItems"
+import { useLocation } from "react-router-dom";
 
-
+// All the routes you want to exclude
+const withouSidebarRoutes = ["/application/maghandi/college"];
    
  export const Navbar=() =>{
 
+  const {pathname} = useLocation();
+
+  if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
 
   
           return(

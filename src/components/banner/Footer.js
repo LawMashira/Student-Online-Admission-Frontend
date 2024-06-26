@@ -9,6 +9,7 @@ import {
 
 export const Footer = () => {
   return (
+    <footer>
     <div className="w-full h-auto py-20   border-b-[1px] border-black  grid grid-cols-1  mdl:grid-cols-4 gap-8">
       <div className="w-full  h-full flex flex-col">
         <div className="  border-yellow-500 rounded-lg overflow-hidden">
@@ -130,6 +131,7 @@ export const Footer = () => {
         </div>
       </div>
     </div>
+    </footer>
   );
 };
 export default Footer;

@@ -47,7 +47,7 @@ const login= async(e)=>{
   e.preventDefault();
   //http://localhost:8080/api/authentication/sign-in
   ///api/users/signin
-        try {
+       try {
             await axios.post('http://localhost:8080/api/authentication/sign-in', { username, password });
             alert('Login successful');
             navigate('/application/maghandi/college')
@@ -152,7 +152,7 @@ const login= async(e)=>{
                 </div>
                                    <div className="mt-8 flex flex-col"> <h1 className='text-center'> OR</h1></div>
 
-                <div className="flex flex-col mt-0" ><Link to="/register/maghandi/college" className="py-3 rounded-xl bg-green-500 text-white font-bold text-lg  mt-12 text-center"> Create Account </Link></div>
+                <div className="flex flex-col mt-0" ><Link to="/general-instructions/maghandi/college" className="py-3 rounded-xl bg-green-500 text-white font-bold text-lg  mt-12 text-center"> Create Account </Link></div>
 
 
 
