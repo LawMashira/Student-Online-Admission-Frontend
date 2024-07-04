@@ -16,8 +16,11 @@ const Register = () => {
     password: "",
   });
 
+
+  
+
   //******************************************** */
-  const navigate = useNavigate();
+  /*const navigate = useNavigate();
   const handleChange = (e) => {
     const value = e.target.value;
     setUser({ ...user, [e.target.name]: value });
@@ -54,7 +57,7 @@ const Register = () => {
         }
         setLoading(false);
       });
-  };
+  };*/
 
   return (
     <div

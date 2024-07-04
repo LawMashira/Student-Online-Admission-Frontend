@@ -1,5 +1,5 @@
 
-/*
+
 import { BASE_API_URL } from "../components/common/constants";
 import axios from "axios";
 const BASE_URL = BASE_API_URL + '/api/authentication';
@@ -16,4 +16,4 @@ class AuthenticationService {
     }
 }
 
-export default  new AuthenticationService();*/
+export default  new AuthenticationService();

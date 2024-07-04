@@ -13,8 +13,8 @@ export const clearCurrentUser = () => {
         type: CLEAR_CURRENT_USER,
     };
 };
-
 */
+
 
 import { CLEAR_CURRENT_USER, SET_CURRENT_USER } from '../types';
 
